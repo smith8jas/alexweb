@@ -1,0 +1,629 @@
+import type { MenuCategory } from './types';
+
+export const menuCategories: MenuCategory[] = [
+  {
+    id: 'cafes',
+    label: 'Cafes',
+    summary: 'Espresso, filtrados, cappuccinos, lattes, chocolate y tes.',
+    icon: 'coffee',
+    tone: 'espresso',
+    items: [
+      {
+        name: 'Espresso',
+        description: 'Simple o doble.',
+        tags: ['cafe', 'caliente'],
+      },
+      {
+        name: 'Cortado',
+        description: 'Espresso con espuma de leche.',
+        tags: ['cafe', 'leche'],
+      },
+      {
+        name: 'Cappuccino',
+        description: 'Espresso, leche caliente, espuma y canela.',
+        tags: ['cafe', 'leche'],
+      },
+      {
+        name: 'Cappuccino Light',
+        description: 'Con leche de soya o descremada.',
+        tags: ['cafe', 'light'],
+      },
+      {
+        name: 'Cafe Destilado',
+        description: 'Simple o doble.',
+        tags: ['cafe', 'caliente'],
+      },
+      {
+        name: 'Cafe Descafeinado',
+        description: 'Simple o doble.',
+        tags: ['cafe', 'sin cafeina'],
+      },
+      {
+        name: 'Cafe con Leche',
+        description: 'Simple o doble.',
+        tags: ['cafe', 'leche'],
+      },
+      {
+        name: 'Chocolate Caliente',
+        description: 'Simple o doble.',
+        tags: ['dulce', 'caliente'],
+      },
+      {
+        name: 'Te Gourmet Metropolitan',
+        description: 'Varios sabores; simple o doble.',
+        tags: ['te', 'caliente'],
+      },
+      {
+        name: 'Cafe Latte',
+        description:
+          'Espresso con esencia, leche batida, crema y chocolate raspado.',
+        tags: ['cafe', 'leche', 'dulce'],
+      },
+      {
+        name: 'Cafe Mocha',
+        description:
+          'Espresso con chocolate, leche batida, crema y chocolate raspado.',
+        tags: ['cafe', 'dulce'],
+      },
+      {
+        name: 'Cappuccino con Esencias',
+        description: 'Cappuccino con esencia; simple o doble.',
+        tags: ['cafe', 'dulce'],
+      },
+      {
+        name: 'Latte Frio',
+        description: 'Espresso con leche, hielo y esencia.',
+        tags: ['cafe', 'frio'],
+      },
+      {
+        name: 'Cafe Bombon',
+        description: 'Espresso con leche condensada; simple o doble.',
+        tags: ['cafe', 'dulce'],
+      },
+      {
+        name: 'Cafe Amaretto',
+        description: 'Cafe de estilo adulto presente en el menu historico.',
+        tags: ['cafe', 'especial'],
+      },
+      {
+        name: 'Cafe Irlandes',
+        description: 'Cafe de estilo adulto presente en el menu historico.',
+        tags: ['cafe', 'especial'],
+      },
+    ],
+  },
+  {
+    id: 'desayunos',
+    label: 'Desayunos',
+    summary: 'Clasicos de manana, huevos, panqueques, waffles y tacos.',
+    icon: 'croissant',
+    tone: 'caramel',
+    items: [
+      {
+        name: 'Desayuno Americano',
+        description:
+          'Tostadas o croissant, huevos al gusto, tocino, jamon o lomito, hash browns, fruta o jugo, cafe o te.',
+        tags: ['desayuno', 'salado'],
+      },
+      {
+        name: 'Omelette de Tres Huevos',
+        description: 'Pimiento morron, cebolla y queso.',
+        tags: ['desayuno', 'salado'],
+      },
+      {
+        name: 'Revuelto de Claras y Verduras',
+        description: 'Revuelto de claras con verduras.',
+        tags: ['desayuno', 'fit'],
+      },
+      {
+        name: 'Breakfast Tacos',
+        description:
+          'Huevos, queso cheddar, tocino, jamon o champinon y salsas mexicanas.',
+        tags: ['desayuno', 'mexicano'],
+      },
+      {
+        name: 'Omelette de Champinones y Espinaca',
+        description: 'Champinones, tomate, jamon, queso, espinaca y cebolla.',
+        tags: ['desayuno', 'salado'],
+      },
+      {
+        name: 'Huevos Rancheros',
+        description:
+          'Huevos fritos en tortilla de trigo con salsa, queso y jalapenos.',
+        tags: ['desayuno', 'mexicano'],
+      },
+      {
+        name: 'Omelette de Carne',
+        description:
+          'Carne de res, tomate, cebolla, hash brown, queso cheddar, albahaca y perejil.',
+        tags: ['desayuno', 'salado'],
+      },
+      {
+        name: 'Hash Browns',
+        description: 'Papas salteadas con mantequilla y cebolla.',
+        tags: ['desayuno', 'salado'],
+      },
+      {
+        name: 'Tostadas o Croissant',
+        description: 'Con mantequilla y mermelada.',
+        tags: ['desayuno', 'dulce'],
+      },
+      {
+        name: 'Panqueques',
+        description: 'Con mantequilla y miel de maple.',
+        tags: ['desayuno', 'dulce'],
+      },
+      {
+        name: 'Panqueques de Chocolate',
+        description: 'Con chispas, salsa de chocolate y crema.',
+        tags: ['desayuno', 'dulce'],
+      },
+      {
+        name: 'Panqueques de Frutilla',
+        description: 'Con frutillas, salsa de frutilla y crema.',
+        tags: ['desayuno', 'dulce'],
+      },
+      {
+        name: 'Panqueques de Platano',
+        description: 'Con platano, salsa de frutilla y crema.',
+        tags: ['desayuno', 'dulce'],
+      },
+      {
+        name: 'Waffles',
+        description: 'Con mantequilla y miel de maple.',
+        tags: ['desayuno', 'dulce'],
+      },
+      {
+        name: 'Tostadas Francesas',
+        description: 'Pan molde rebosado en leche y huevo.',
+        tags: ['desayuno', 'dulce'],
+      },
+      {
+        name: 'Tostadas Francesas con Frutilla',
+        description:
+          'Rellenas con queso crema, crema batida, frutillas y salsa casera.',
+        tags: ['desayuno', 'dulce'],
+      },
+    ],
+  },
+  {
+    id: 'pasteleria',
+    label: 'Pasteleria',
+    summary: 'Galletas, muffins, brownies, croissants, humintas y salados.',
+    icon: 'sparkles',
+    tone: 'oat',
+    items: [
+      {
+        name: 'Alexander Cookie',
+        description: 'Galleta en varios sabores.',
+        tags: ['dulce', 'panaderia'],
+      },
+      {
+        name: 'Muffin',
+        description: 'Varios sabores.',
+        tags: ['dulce', 'panaderia'],
+      },
+      {
+        name: 'Brownie',
+        description: 'Brownie clasico.',
+        tags: ['dulce', 'chocolate'],
+      },
+      {
+        name: 'Brownie con Helado',
+        description: 'Brownie servido con helado.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Danish',
+        description: 'Pieza de pasteleria hojaldrada.',
+        tags: ['dulce', 'panaderia'],
+      },
+      {
+        name: 'Palmeritas',
+        description: 'Palmeritas hojaldradas.',
+        tags: ['dulce', 'panaderia'],
+      },
+      {
+        name: 'Croissant Relleno con Chocolate',
+        description: 'Pequeno o grande.',
+        tags: ['dulce', 'panaderia'],
+      },
+      { name: 'Media Luna', description: 'Media luna.', tags: ['panaderia'] },
+      {
+        name: 'Cono Relleno con Pie de Limon',
+        description: 'Cono relleno.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Cinnamon Roll',
+        description: 'Pequeno o grande.',
+        tags: ['dulce', 'canela'],
+      },
+      {
+        name: 'Crepes Dulces con Frutas',
+        description:
+          'Con frutas de estacion, dulce de leche y/o leche condensada.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Huminta',
+        description: 'Huminta tradicional.',
+        tags: ['boliviano', 'salado'],
+      },
+      { name: 'Cunape', description: 'Cunape.', tags: ['boliviano', 'salado'] },
+      {
+        name: 'Quiche',
+        description: 'Pie de quesos, verduras frescas, jamon, panceta y pollo.',
+        tags: ['salado'],
+      },
+      {
+        name: 'Croissant con Jamon y Queso',
+        description: 'Pequeno o grande.',
+        tags: ['salado', 'panaderia'],
+      },
+      {
+        name: 'Empanada de Queso de Masa de Mil Hojas',
+        description: 'Pequeno o grande.',
+        tags: ['salado', 'panaderia'],
+      },
+    ],
+  },
+  {
+    id: 'tortas',
+    label: 'Tortas',
+    summary:
+      'Porciones y enteras: chocolate, limon, zanahoria, tres leches y mas.',
+    icon: 'utensils',
+    tone: 'clay',
+    items: [
+      {
+        name: 'Torta Pecado',
+        description: 'Chocolate y espresso con ganache.',
+        tags: ['dulce', 'chocolate'],
+      },
+      {
+        name: 'Torta de Limon',
+        description: 'Bizcocho de vainilla con crema de limon.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Torta de Zanahoria',
+        description: 'Bizcocho de nuez con zanahoria.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Torta Marmolada',
+        description:
+          'Vainilla y chocolate con manjar, ciruelas y crema de chocolate.',
+        tags: ['dulce', 'chocolate'],
+      },
+      {
+        name: 'Torta Tres Leches',
+        description: 'Vainilla con tres leches y crema.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Torta Gloria',
+        description: 'Bizcocho de nuez con nueces y crema batida.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Torta de Mocha',
+        description: 'Bizcocho de nuez con dulce de leche.',
+        tags: ['dulce', 'cafe'],
+      },
+      {
+        name: 'Torta Red Velvet',
+        description: 'Vainilla con queso crema y leche condensada.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Torta Vertice de Crepes',
+        description: 'Crepes con crema pastelera, vainilla y leche condensada.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Torta de Oro',
+        description:
+          'Harina de quinua, queso crema, crema de leche, leche condensada y azucar morena.',
+        tags: ['dulce', 'quinua'],
+      },
+      {
+        name: 'Pie de Manzana',
+        description: 'Pie de manzana.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Pie de Manzana con Helado',
+        description: 'Con helado de vainilla.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Pie de Limon',
+        description: 'Pie de limon.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Cheesecake',
+        description: 'Varios sabores.',
+        tags: ['dulce', 'postre'],
+      },
+      {
+        name: 'Pasteleria Entera',
+        description: 'Tortas, pies, cheesecake y quiche para compartir.',
+        tags: ['eventos', 'postre'],
+      },
+    ],
+  },
+  {
+    id: 'sandwiches-ensaladas',
+    label: 'Sandwiches y ensaladas',
+    summary: 'Opciones clasicas, verdes, con quinua y platos para todo el dia.',
+    icon: 'sandwich',
+    tone: 'green',
+    items: [
+      {
+        name: 'Jamon y Queso',
+        description: 'Jamon, queso, mayonesa y mostaza.',
+        tags: ['salado', 'sandwich'],
+      },
+      {
+        name: 'Lomito',
+        description: 'Lomito, lechuga, tomate, cebolla, pimiento y mayonesa.',
+        tags: ['salado', 'sandwich'],
+      },
+      {
+        name: 'Pechuga de Pollo',
+        description: 'Pollo, lechuga, tomate, cebolla, mayonesa y mostaza.',
+        tags: ['salado', 'sandwich'],
+      },
+      {
+        name: 'Sandwich de Ensalada de Pollo o Atun',
+        description:
+          'Pollo o atun con pimiento, lechuga, tomate, apio, cebolla y mayonesa.',
+        tags: ['salado', 'sandwich'],
+      },
+      {
+        name: 'Sunrise Sandwich',
+        description: 'Jamon o tocino, queso y huevo en croissant.',
+        tags: ['desayuno', 'sandwich'],
+      },
+      {
+        name: 'Club Sandwich',
+        description:
+          'Tomate, lechuga, pollo, huevo, queso, jamon, panceta y salsa caesar.',
+        tags: ['salado', 'sandwich'],
+      },
+      {
+        name: 'Alexander',
+        description:
+          'Pollo o carne con verduras, tocino o jamon, queso, mostaza y mayonesa.',
+        tags: ['salado', 'sandwich'],
+      },
+      {
+        name: 'Ensalada de Fruta',
+        description: 'Personal o grande.',
+        tags: ['dulce', 'fit'],
+      },
+      {
+        name: 'Ensalada Caesar',
+        description:
+          'Lechuga, tomate, espinaca, cebolla, croutons, huevo, carne, pollo o mixta, salsa caesar y parmesano.',
+        tags: ['ensalada', 'salado'],
+      },
+      {
+        name: 'Ensalada Chef',
+        description:
+          'Vegetales, queso, pollo, atun o mixto, huevo, pasas, croutons y salsa italiana o golf.',
+        tags: ['ensalada', 'salado'],
+      },
+      {
+        name: 'Ensalada Vegetariana',
+        description:
+          'Vegetales, queso, germen de alfalfa, pasas, nueces, champinones y salsa.',
+        tags: ['ensalada', 'vegetariano'],
+      },
+      {
+        name: 'Ensalada Verde de Quinua',
+        description:
+          'Quinua con tomate, brocoli, zucchini, zanahoria, queso, germen, nueces y salsa.',
+        tags: ['ensalada', 'quinua', 'fit'],
+      },
+      {
+        name: 'Ensalada Asiatica',
+        description:
+          'Lechugas, cebolla, tomate, repollo, pollo teriyaki, pina y salsa teriyaki.',
+        tags: ['ensalada', 'salado'],
+      },
+      {
+        name: 'Ensalada de Pollo Crocante',
+        description:
+          'Lechugas, tomate, palta, cebolla, pimiento, palmito, pollo crocante y parmesano.',
+        tags: ['ensalada', 'salado'],
+      },
+    ],
+  },
+  {
+    id: 'especialidades',
+    label: 'Piqueos y mexicanas',
+    summary: 'Quesadillas, fajitas, envueltos, nachos y tablitas.',
+    icon: 'salad',
+    tone: 'gold',
+    items: [
+      {
+        name: 'Quesadilla',
+        description:
+          'Tortilla caliente con cheddar, pico de gallo y guacamole.',
+        tags: ['mexicano', 'salado'],
+      },
+      {
+        name: 'Quesadilla Light',
+        description: 'Tortilla con queso light y pico de gallo.',
+        tags: ['mexicano', 'fit'],
+      },
+      {
+        name: 'Quesadilla de Pollo, Bife o Mixtas',
+        description:
+          'Con salsa barbacoa, cebolla, pimiento, pico de gallo y guacamole.',
+        tags: ['mexicano', 'salado'],
+      },
+      {
+        name: 'Quesadilla Vegetariana',
+        description: 'Cebolla, pimiento, champinones y cheddar.',
+        tags: ['mexicano', 'vegetariano'],
+      },
+      {
+        name: 'Hamburguesa Tex Mex',
+        description:
+          'Hamburguesa con queso, guacamole o palta, lechuga, tomate y papas fritas.',
+        tags: ['mexicano', 'salado'],
+      },
+      {
+        name: 'Fajitas Mixtas',
+        description:
+          'Pollo, carne o mixta con salsa, pico de gallo y guacamole.',
+        tags: ['mexicano', 'salado'],
+      },
+      {
+        name: 'Envuelto Mexicano',
+        description:
+          'Carne, pollo o mixto, lechuga, arroz, queso y salsas en tortilla.',
+        tags: ['mexicano', 'salado'],
+      },
+      {
+        name: 'Burrito Especial de Pollo',
+        description: 'Pollo, palta, queso y crema agria.',
+        tags: ['mexicano', 'salado'],
+      },
+      {
+        name: 'Pollo Teriyaki',
+        description:
+          'Pollo, lechuga, tomate, palta, albahaca y salsa teriyaki.',
+        tags: ['salado'],
+      },
+      {
+        name: 'Andino',
+        description:
+          'Quinua, habas, huacataya, pimiento, lechuga, queso fresco y salsa.',
+        tags: ['boliviano', 'vegetariano'],
+      },
+      {
+        name: 'Nachos',
+        description: 'Cheddar y mozzarella con pico de gallo y guacamole.',
+        tags: ['mexicano', 'piqueo'],
+      },
+      {
+        name: 'Flautas',
+        description:
+          'Carne, pollo o mixta en tortilla frita con guacamole y salsa ranchera.',
+        tags: ['mexicano', 'piqueo'],
+      },
+      {
+        name: 'Lomito Para Picar',
+        description: 'Lomito en salsa especial con papas crocantes.',
+        tags: ['piqueo', 'salado'],
+      },
+      {
+        name: 'Tablita Mexicana',
+        description:
+          'Tartaletas, quesadillas, nachos, flautas y guacamole; personal o grande.',
+        tags: ['piqueo', 'eventos'],
+      },
+    ],
+  },
+  {
+    id: 'fit',
+    label: 'Alexander Fit',
+    summary: 'Vegano, integral, smoothies verdes y opciones ligeras.',
+    icon: 'leaf',
+    tone: 'leaf',
+    items: [
+      {
+        name: 'Mini Ensalada de Frutas',
+        description: 'Fruta con yogurt light o griego y frutos secos.',
+        tags: ['fit', 'dulce'],
+      },
+      {
+        name: 'Trail Mix',
+        description:
+          'Cereales integrales, frutos secos, yogurt light o griego y galleta Alexander.',
+        tags: ['fit', 'dulce'],
+      },
+      {
+        name: 'Panqueques Integrales con Frutas',
+        description: 'Harina integral, soya y canahua, con frutas y maple.',
+        tags: ['fit', 'desayuno'],
+      },
+      {
+        name: 'Panqueques Veganos',
+        description:
+          'Harinas integral, blanca o quinua, leche de soya, linaza y maple.',
+        tags: ['vegano', 'desayuno'],
+      },
+      {
+        name: 'Sandwich Mixto',
+        description: 'Jamon de pavo, queso light y salsa verde.',
+        tags: ['fit', 'sandwich'],
+      },
+      {
+        name: 'Sandwich Vegano',
+        description: 'Palta, palmito, lechuga, tomate, germen y mostaza.',
+        tags: ['vegano', 'sandwich'],
+      },
+      {
+        name: 'Club Sandwich Vegetariano',
+        description:
+          'Pan integral, clara de huevo, queso light, tomate, lechuga, aceitunas y salsa.',
+        tags: ['vegetariano', 'sandwich'],
+      },
+      {
+        name: 'Club Sandwich Vegano',
+        description:
+          'Pan integral, tofu, tomate, lechuga, aceitunas y mayonesa vegana.',
+        tags: ['vegano', 'sandwich'],
+      },
+      {
+        name: 'Envuelto Vegetariano',
+        description:
+          'Vegetales, palta, palmito, queso menonita, germen y salsa.',
+        tags: ['vegetariano', 'salado'],
+      },
+      {
+        name: 'Quiche Vegetariano',
+        description: 'Verduras frescas con mozzarella.',
+        tags: ['vegetariano', 'salado'],
+      },
+      {
+        name: 'Torta de Zanahoria Vegana',
+        description: 'Version vegana en porcion o entera.',
+        tags: ['vegano', 'dulce'],
+      },
+      {
+        name: 'Batido Rejuvenecedor',
+        description: 'Manzana verde, platano y vegetales.',
+        tags: ['smoothie', 'fit'],
+      },
+      {
+        name: 'Batido Relajante',
+        description: 'Manzanilla, leche de soya, mango o durazno y jengibre.',
+        tags: ['smoothie', 'fit'],
+      },
+      {
+        name: 'Batido Energetico',
+        description: 'Platano, leche de soya, chia y frutos secos.',
+        tags: ['smoothie', 'fit'],
+      },
+      {
+        name: 'Green Smoothie Super Antioxidante',
+        description: 'Naranja o mandarina, mora, frutilla, espinaca y acai.',
+        tags: ['smoothie', 'fit'],
+      },
+      {
+        name: 'Green Smoothie Proteinico',
+        description:
+          'Leche de almendra, espinaca, chia, moringa, platano y mantequilla de mani.',
+        tags: ['smoothie', 'fit'],
+      },
+    ],
+  },
+];

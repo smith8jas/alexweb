@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[40066,["/_next/static/chunks/02n1_opp_ov6b.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/2k397unyrshz7.js"],"MenuExplorer"]
+3:I[97367,["/_next/static/chunks/02n1_opp_ov6b.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[[["$","section",null,{"className":"page-hero","style":{"backgroundImage":"url(\"https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1900&q=80\")"},"children":[["$","div",null,{"className":"hero-zoom","aria-hidden":true}],["$","div",null,{"className":"page-hero-inner","children":[["$","p",null,{"className":"eyebrow","children":"Nuestra carta"}],["$","h1",null,{"children":"Para cada momento del día."}],null]}]]}],["$","section",null,{"className":"menu-section","children":["$","div",null,{"className":"menu-shell","children":[["$","$L2",null,{}],["$","p",null,{"className":"eyebrow menu-note","children":"Pregunta por nuestras especialidades de temporada en cualquier sucursal."}]]}]}]],[["$","script","script-0",{"src":"/_next/static/chunks/2k397unyrshz7.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"bg8DgNxqptR9Zw4WaO7pC"}
+5:null

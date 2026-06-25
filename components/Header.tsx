@@ -24,9 +24,6 @@ export function Header() {
             </Link>
           );
         })}
-        <Link className="order-link" href="/contacto">
-          Pedidos
-        </Link>
       </nav>
     </header>
   );

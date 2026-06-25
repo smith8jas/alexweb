@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { ContactForm } from '@/components/ContactForm';
+import { ExperienceGallery } from '@/components/ExperienceGallery';
 import { branches, menuCategories, site } from '@/data';
 
 export const metadata: Metadata = {
@@ -15,7 +17,12 @@ export const metadata: Metadata = {
 const img = (id: string, width = 1400) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&q=80`;
 
-const heroImage = img('1572442388796-11668a67e53d', 2100);
+const heroSlides = [
+  img('1512568400610-62da28bc8a13', 2100),
+  img('1541167760496-1628856ab772', 2100),
+  img('1461023058943-07fcbe16d735', 2100),
+  img('1625021659159-f63f546d74a7', 2100),
+];
 const aboutImage = img('1495474472287-4d71bcdd2085', 1200);
 const menuBandImage = img('1555507036-ab1f4038808a', 1900);
 const productImages = [
@@ -86,22 +93,30 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      <section
-        className="home-hero"
-        style={{ backgroundImage: `url("${heroImage}")` }}
-      >
+      <section className="home-hero">
         <div
-          className="hero-zoom"
+          className="hero-slideshow"
           aria-hidden
-        />
-        <div
-          className="sunburst"
-          aria-hidden
-        />
-        <div className="hero-inner">
+        >
+          {heroSlides.map((src, index) => (
+            <div
+              className="hero-slide"
+              key={src}
+              style={{
+                backgroundImage: `url("${src}")`,
+                animationDelay: `${index * 5}s`,
+              }}
+            />
+          ))}
+        </div>
+        <div className="hero-inner hero-inner-center">
+          <img
+            className="hero-logo"
+            src="/design/logo-white.png"
+            alt="Alexander Coffee"
+          />
           <h1 className="hero-title">
-            <span className="hero-line">Un buen café</span>
-            <br />
+            <span className="hero-line">Un buen café</span>{' '}
             <span className="hero-line">
               nos <em>une.</em>
             </span>
@@ -155,10 +170,11 @@ export default function Home() {
               href="/menu"
               key={`${item.category}-${item.name}`}
             >
-              <div
-                className="featured-image"
-                style={{ backgroundImage: `url("${productImages[index]}")` }}
-              >
+              <div className="featured-image">
+                <div
+                  className="featured-image-zoom"
+                  style={{ backgroundImage: `url("${productImages[index]}")` }}
+                />
                 <span className="featured-tag">{item.category}</span>
               </div>
               <div className="featured-body">
@@ -210,15 +226,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="gallery-grid experience-gallery">
-            {gallery.map((url, index) => (
-              <div
-                className={`gallery-item ${index === 0 ? 'large' : ''}`}
-                key={url}
-                style={{ backgroundImage: `url("${url}")` }}
-              />
-            ))}
-          </div>
+          <ExperienceGallery images={gallery} />
 
           <div className="testimonial-grid experience-testimonials">
             {testimonials.map((testimonial) => (
@@ -271,55 +279,7 @@ export default function Home() {
             </div>
           </div>
 
-          <form
-            className="form-panel"
-            action={`mailto:${site.email}`}
-            method="post"
-            encType="text/plain"
-          >
-            <div className="form-grid">
-              <label className="field">
-                <span>Nombre</span>
-                <input
-                  name="nombre"
-                  placeholder="Tu nombre"
-                  autoComplete="name"
-                  required
-                />
-              </label>
-              <label className="field">
-                <span>Email</span>
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="tu@email.com"
-                  autoComplete="email"
-                  required
-                />
-              </label>
-              <label className="field full">
-                <span>Asunto</span>
-                <input
-                  name="asunto"
-                  placeholder="¿Cómo podemos ayudarte?"
-                />
-              </label>
-              <label className="field full">
-                <span>Mensaje</span>
-                <textarea
-                  name="mensaje"
-                  placeholder="Cuéntanos..."
-                  required
-                />
-              </label>
-            </div>
-            <button
-              className="button dark"
-              type="submit"
-            >
-              Enviar mensaje
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </>

@@ -8,6 +8,9 @@ export const branches: Branch[] = [
     phone: '231-2790',
     neighborhood: 'Centro',
     tags: ['clasico', 'reuniones'],
+    hours: 'Lun a Dom · 07:45 – 23:00',
+    lat: -16.4998,
+    lng: -68.1335,
   },
   {
     city: 'La Paz',
@@ -16,6 +19,9 @@ export const branches: Branch[] = [
     phone: '240-6482',
     neighborhood: 'Centro',
     tags: ['rapido', 'centro'],
+    hours: 'Lun a Dom · 07:45 – 23:00',
+    lat: -16.4953,
+    lng: -68.1378,
   },
   {
     city: 'La Paz',
@@ -24,6 +30,9 @@ export const branches: Branch[] = [
     phone: '243-1006',
     neighborhood: 'Sopocachi',
     tags: ['amigos', 'trabajo'],
+    hours: 'Lun a Dom · 07:45 – 23:00',
+    lat: -16.5101,
+    lng: -68.1265,
   },
   {
     city: 'La Paz',
@@ -32,6 +41,9 @@ export const branches: Branch[] = [
     phone: '243-5131',
     neighborhood: 'San Jorge',
     tags: ['cine', 'familia'],
+    hours: 'Lun a Dom · 10:00 – 23:00',
+    lat: -16.5072,
+    lng: -68.1287,
   },
   {
     city: 'La Paz',
@@ -40,6 +52,9 @@ export const branches: Branch[] = [
     phone: '243-0258',
     neighborhood: 'San Jorge',
     tags: ['pausa', 'cerca'],
+    hours: 'Lun a Dom · 07:45 – 22:00',
+    lat: -16.5096,
+    lng: -68.1253,
   },
   {
     city: 'La Paz',
@@ -48,6 +63,9 @@ export const branches: Branch[] = [
     phone: '277-3410',
     neighborhood: 'San Miguel',
     tags: ['compras', 'desayuno'],
+    hours: 'Lun a Dom · 07:45 – 23:00',
+    lat: -16.5428,
+    lng: -68.0842,
   },
   {
     city: 'La Paz',
@@ -56,6 +74,9 @@ export const branches: Branch[] = [
     phone: '291-6873',
     neighborhood: 'San Miguel',
     tags: ['zona sur', 'trabajo'],
+    hours: 'Lun a Dom · 07:45 – 23:00',
+    lat: -16.5459,
+    lng: -68.0826,
   },
   {
     city: 'La Paz',
@@ -64,6 +85,9 @@ export const branches: Branch[] = [
     phone: '291-7461',
     neighborhood: 'Calacoto',
     tags: ['familia', 'postres'],
+    hours: 'Lun a Dom · 07:45 – 23:00',
+    lat: -16.5535,
+    lng: -68.0795,
   },
   {
     city: 'La Paz',
@@ -72,6 +96,9 @@ export const branches: Branch[] = [
     phone: '279-6668',
     neighborhood: 'Achumani',
     tags: ['barrio', 'calma'],
+    hours: 'Lun a Dom · 07:45 – 23:00',
+    lat: -16.5642,
+    lng: -68.0701,
   },
   {
     city: 'La Paz',
@@ -80,6 +107,9 @@ export const branches: Branch[] = [
     phone: '76762581 / 76762582',
     neighborhood: 'El Alto',
     tags: ['aeropuerto', 'viaje'],
+    hours: 'Horarios de vuelos',
+    lat: -16.5132,
+    lng: -68.1924,
   },
   {
     city: 'Santa Cruz',
@@ -89,6 +119,9 @@ export const branches: Branch[] = [
     phone: '3378653',
     neighborhood: 'Monsenor Rivero',
     tags: ['terraza', 'encuentros'],
+    hours: 'Lun a Dom · 07:45 – 23:00',
+    lat: -17.7712,
+    lng: -63.1808,
   },
   {
     city: 'Santa Cruz',
@@ -98,5 +131,8 @@ export const branches: Branch[] = [
     phone: '76768336',
     neighborhood: 'Equipetrol',
     tags: ['oficina', 'compras'],
+    hours: 'Lun a Dom · 07:45 – 23:00',
+    lat: -17.7563,
+    lng: -63.2011,
   },
 ];

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
+import { SocialLinks } from "@/components/SocialLinks";
 import { site } from "@/data";
 
 export const metadata: Metadata = {
@@ -48,17 +50,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="contact-kicker">Síguenos</p>
-                <div className="social-row">
-                  <a href={site.social.facebook} target="_blank" rel="noreferrer">
-                    Facebook
-                  </a>
-                  <a href={site.social.instagram} target="_blank" rel="noreferrer">
-                    Instagram
-                  </a>
-                  <a href={site.social.youtube} target="_blank" rel="noreferrer">
-                    YouTube
-                  </a>
-                </div>
+                <SocialLinks />
               </div>
               <Link className="button dark" href="/sucursales">
                 Ver sucursales
@@ -66,29 +58,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form className="form-panel" action={`mailto:${site.email}`} method="post" encType="text/plain">
-            <div className="form-grid">
-              <label className="field">
-                <span>Nombre</span>
-                <input name="nombre" placeholder="Tu nombre" autoComplete="name" required />
-              </label>
-              <label className="field">
-                <span>Email</span>
-                <input name="email" type="email" placeholder="tu@email.com" autoComplete="email" required />
-              </label>
-              <label className="field full">
-                <span>Asunto</span>
-                <input name="asunto" placeholder="¿Cómo podemos ayudarte?" />
-              </label>
-              <label className="field full">
-                <span>Mensaje</span>
-                <textarea name="mensaje" placeholder="Cuéntanos..." required />
-              </label>
-            </div>
-            <button className="button dark" type="submit">
-              Enviar mensaje
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </>

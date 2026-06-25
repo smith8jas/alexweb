@@ -37,6 +37,9 @@ export type Branch = {
   phone: string;
   neighborhood: string;
   tags: string[];
+  hours: string;
+  lat: number;
+  lng: number;
 };
 
 export type ServiceItem = {

@@ -7,10 +7,10 @@ export const values = [
 ];
 
 export const stats = [
-  { value: '1996', label: 'primera tienda en San Miguel' },
-  { value: '12', label: 'sucursales en La Paz y Santa Cruz' },
-  { value: '270', label: 'personas en el equipo' },
-  { value: '14', label: 'rangos de producto' },
+  { value: '1996', label: 'Primera Tienda en San Miguel' },
+  { value: '12', label: 'Sucursales en La Paz y Santa Cruz' },
+  { value: '270', label: 'Personas en el Equipo' },
+  { value: '14', label: 'Rangos de Producto' },
 ];
 
 export const storyTimeline = [

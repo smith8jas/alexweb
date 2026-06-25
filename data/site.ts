@@ -11,6 +11,7 @@ export const site = {
     facebook: 'https://www.facebook.com/alexander.coffee.9',
     instagram: 'https://instagram.com/alexandercoffeebo',
     youtube: 'https://www.youtube.com/channel/UC9DgX1wA8TX5FoHbrDYEeQQ',
+    tiktok: 'https://www.tiktok.com/@alexandercoffeebo',
   },
 };
 

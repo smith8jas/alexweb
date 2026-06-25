@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { branches, site } from "@/data";
+import { SocialLinks } from "@/components/SocialLinks";
 
 export function Footer() {
   const cities = Array.from(new Set(branches.map((branch) => branch.city)));
@@ -14,17 +15,7 @@ export function Footer() {
               Más que una cafetería: un lugar donde los momentos se vuelven únicos
               junto a amigos y familia. Desde 1996.
             </p>
-            <div className="social-row" aria-label="Redes sociales">
-              <a href={site.social.facebook} target="_blank" rel="noreferrer">
-                Facebook
-              </a>
-              <a href={site.social.instagram} target="_blank" rel="noreferrer">
-                Instagram
-              </a>
-              <a href={site.social.youtube} target="_blank" rel="noreferrer">
-                YouTube
-              </a>
-            </div>
+            <SocialLinks />
           </div>
 
           <div>
